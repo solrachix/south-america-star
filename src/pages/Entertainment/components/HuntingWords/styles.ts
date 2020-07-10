@@ -29,7 +29,7 @@ export const Tr = styled.View`
 `
 
 interface TdProps {
-  disabled: boolean;
+  actived: boolean;
 }
 
 export const Td = styled.TouchableOpacity<TdProps>`
@@ -41,10 +41,5 @@ export const Td = styled.TouchableOpacity<TdProps>`
   margin: 0;
 
   border: 0.2px solid #191B21;
-  background-color: ${props => props.disabled ? '#191B21' : '#252131'};
-  color: #F4F4F4;
-
-  text-align: center;
-  align-items: center;
-  line-height: 30px;
+  background-color: ${props => props.actived ? '#191B21' : '#252131'};
 `

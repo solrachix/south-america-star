@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Dimensions } from 'react-native'
+import WebView from 'react-native-webview'
 import Animated from 'react-native-reanimated'
 
 import { Container, Image, Video, ImageLinearGradient } from './styles'

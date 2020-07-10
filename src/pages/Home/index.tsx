@@ -65,7 +65,7 @@ const Home: React.FC = ({ modalizeRef, navigation }) => {
           <ReportItem
             key={report.id}
             // onPress={() => modalizeRef.current?.open() }
-            // onPress={() => navigation.push('report', { report }) }
+            onPress={() => navigation.push('report', { report }) }
           >
             {
               report.isVideo

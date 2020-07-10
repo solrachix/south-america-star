@@ -1,4 +1,4 @@
-import React, { useRef, useContext, useEffect, memo } from 'react'
+import React, { useRef, useContext, useEffect, useState, useCallback, memo } from 'react'
 import { ThemeContext } from 'styled-components'
 
 import randomLetter from '../../../../utils/randomLetter'
@@ -140,15 +140,19 @@ const HuntingWords: React.FC = () => {
   const theme = useContext(ThemeContext)
   const modalizeRef = useRef<Modalize>(null)
   const wordSearchGrid: string[][] = []
+  const wordSearchGridToCompare: string[][] = []
+  const [selectedItems, setSelectedItems] = useState<number[]>([])
 
   for (let i = 0; i < wordSearchLength; i++) {
     const line: string[] = []
+    const lineTwo: string[] = []
 
     for (let i = 0; i < wordSearchLength; i++) {
-      line.push(/** randomLetter() */0)
+      line.push(randomLetter())
+      lineTwo.push(0)
     }
-
     wordSearchGrid.push(line)
+    wordSearchGridToCompare.push(lineTwo)
   }
 
   wordSearchData.map(({ orientation, answer, start, end }) => {
@@ -186,6 +190,10 @@ const HuntingWords: React.FC = () => {
 
   useEffect(() => () => modalizeRef.current?.close(), [])
 
+  const handleLetter = useCallback((lineIndex: number, columnIndex: number, column:string) => {
+    wordSearchGridToCompare[lineIndex][columnIndex] = column
+  }, [])
+
   return (
     <Container>
 
@@ -195,7 +203,7 @@ const HuntingWords: React.FC = () => {
             <Tr key={index} >
               {
                 line.map((column: string, index2: number) => (
-                  <Td key={`${column}-${index2}`}>
+                  <Td key={`${column}-${index2}`} onPress={() => handleLetter(index, index2, column) }>
                     <P text={column} size={14} style={{ textAlign: 'center', lineHeight: 30 }} />
                   </Td>
                 ))
