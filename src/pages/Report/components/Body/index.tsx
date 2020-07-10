@@ -18,10 +18,10 @@ interface props {
   scrollY: Animated.Value<number>;
   report: {
     id: number;
-    author: string;
+    authors: string[];
     avatar: string;
     date: string
-    img: string;
+    source: string;
     title: string;
     content: string;
   }
@@ -71,7 +71,7 @@ const Body: React.FC<props> = ({ report, scrollY }) => {
         <Avatar source={{ uri: report.avatar }} />
         <HeaderContent>
           <Column width={80} >
-            <Text text={report.author.capitalize()} weight={700} />
+            <Text text={report.authors.map(word => word.split(' ')[0].toLowerCase().capitalize()).join(', ')} weight={700} />
             <Text text={report.date} size={14} weight={500} />
           </Column>
           <Column width={20} >

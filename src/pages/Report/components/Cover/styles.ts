@@ -3,6 +3,8 @@ import { rgba } from 'polished'
 import { LinearGradient } from 'expo-linear-gradient'
 import Animated from 'react-native-reanimated'
 
+import { Video as video } from 'expo-av'
+
 export const Container = styled(Animated.ScrollView)`
   width: 100%;
   height: 600px;
@@ -23,6 +25,11 @@ export const Image = styled(Animated.Image)<ImageProps>`
 
   resize-mode: cover;
   z-index: 1;
+`
+
+export const Video = styled(video)`
+  width: 100%;
+  height: 400px;
 `
 
 export const ImageLinearGradient = styled(LinearGradient).attrs((/* props */) => ({

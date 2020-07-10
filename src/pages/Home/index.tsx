@@ -4,7 +4,7 @@ import { ThemeContext } from 'styled-components'
 
 import Carousel from 'react-native-snap-carousel'
 import Text from '../../components/Text'
-import { Container, CarouselContainer, ImageBackground, Item, ItemLinearGradient, ItemAuthor, ReportItem, ReportContent, Column, ReportText, Image } from './styles'
+import { Container, CarouselContainer, ImageBackground, Item, ItemLinearGradient, ItemAuthor, ReportItem, ReportContent, Column, ReportText, Image, Video } from './styles'
 
 import temporaryData from '../../temporaryData'
 
@@ -66,10 +66,27 @@ const Home: React.FC = ({ modalizeRef, navigation, ...props }) => {
             // onPress={() => modalizeRef.current?.open() }
             onPress={() => navigation.push('report', { report }) }
           >
-            <Image resizeMode="center" source={report.img} />
+            {
+              report.isVideo
+                ? (
+                  <Video
+                    source={report.source}
+                    rate={1.0}
+                    volume={1.0}
+                    isMuted={false}
+                    resizeMode="cover"
+                    shouldPlay
+                    isLooping
+                    // useNativeControls={true}
+                  />
+                )
+                : <Image resizeMode="center" source={!report.isVideo && report.source} />
+            }
             <ReportContent>
               <Column width={80} >
-                <Text text={report.author.capitalize()} color={themeContext.orange} weight={700} />
+                <Text
+                  text={report.authors.map(word => word.split(' ')[0].toLowerCase().capitalize()).join(', ')}
+                  size={10} color={themeContext.orange} weight={700} />
                 <Text text={report.date} size={14} weight={500} />
               </Column>
               <Column width={20} >

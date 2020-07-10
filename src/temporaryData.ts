@@ -1,6 +1,8 @@
 import charge from './assets/images/charge.png'
 import reportagem1 from './assets/images/reportagem_1.jpg'
 
+import teste from './assets/videos/teste.mp4'
+
 import leao from './assets/images/horoscopos/leao.png'
 import aquario from './assets/images/horoscopos/aquario.png'
 import aries from './assets/images/horoscopos/aries.png'
@@ -19,7 +21,6 @@ export default {
     {
       id: 1,
       avatar: 'https://source.unsplash.com/random/?people,care',
-      author: 'seila',
       authors: [
         'ARYADNE MAGALHAES DE SOUSA',
         'BEATRIZ DE SOUZA NUNES',
@@ -28,7 +29,8 @@ export default {
         'RAI WILLY DE OLIVEIRA ALVES'
       ],
       date: '08/07/2020',
-      img: reportagem1,
+      isVideo: false,
+      source: reportagem1,
       title: 'Reportagem 1 - entrevista',
       content: `Formada na Universidade Nossa Senhora do Patrocínio – localizada na cidade de Itu, São Paulo – a professa de matemática Sheila Abdala, amante da profissão, atua na área há cerca de quatorze anos, ministrando principalmente em escolas de rede pública.
       Atualmente, Abdala exerce sua profissão na Secretária Municipal de Educação de Santana de Parnaíba e na Secretária de Educação de Pirapora do Bom Jesus, ministrando suas aulas para alunos do Ensino Fundamental. 
@@ -41,7 +43,6 @@ export default {
     {
       id: 2,
       avatar: 'https://source.unsplash.com/random/?people,care',
-      author: 'seila',
       authors: [
         'ANA LUIZA DA MOTA FERREIRA',
         'BEATRIZ DE PAIVA LINS',
@@ -50,7 +51,8 @@ export default {
         'RAYSSA MICAELLE RAMOS DA SILVA'
       ],
       date: '08/07/2020',
-      img: reportagem1,
+      isVideo: true,
+      source: teste,
       title: 'Reportagem 2 - texto jornalístico',
       content: `Nem a quarentena, que já dura quase quatro meses, não conseguiu parar a amostra de Matemática da ETEC Anhanguera! Uma atração se destacou entre as outras pelo alcance, curtidas e quantidade de compartilhamentos. Em uma produção cinematográfica com direito a trilha sonora, a equipe fez uma viagem de avião, e a bordo do vôo 3-B da Bartocompany, passaram por todos os continentes do planeta, mostrando diversas construções famosas.
       Cada grupo escolheu um monumento do continente responsável. O tour passou
@@ -68,6 +70,24 @@ export default {
       E aí? Se interessou pela ideia? Segue o link do vídeo, conhecimento nunca é
       demais!”.
       Por fim, pedimos a professora uma sugestão, para facilitar o ensino da Geometria Espacial no método EAD – por motivos da pandemia causada pelo vírus Covid-19. Sheila Abdala sugere: “Minha dica é abusar da tecnologia. Gravar vídeo aula das explicações e fazer aulas pelo google meet, para discutir as situações com os alunos”.`
+    },
+    {
+      id: 3,
+      avatar: 'https://source.unsplash.com/random/?people,care',
+      authors: [
+        'DENILSON RODRIGUES DE SOUSA',
+        'ERICK DE LIMA TEIXEIRA SILVA',
+        'KAILAINE OLIVEIRA SANTOS DE JESUS',
+        'LUIZA CHRISTINA ALMEIDA MELO'
+      ],
+      date: '08/07/2020',
+      isVideo: false,
+      source: reportagem1,
+      title: 'O desastre 2020',
+      content: `Na situação que estamos hoje não podemos negar que todos no mundo inteiro estão preocupado não é? Para falar a verdade, gostaria de afirmar isso, mas infelizmente não é o caso, a única obrigação que nós humanos temos agora é respeitar a quarentena para salvar não só nós mesmos, mas pessoas a nossa volta e assim conseguiríamos passar por essa situação difícil o mais rápido possível, mas como disse este não é o caso, as pessoas só pensam em si mesma hoje em dia, empatia não é mais algo obrigatório para ser uma pessoa melhor, está mais para um traço de personalidade ou algo opcional, e não deveria ser assim.
+      Essa ignorância, do ser humano, já passou dos limites, até hoje acho que este ano foi o ano em que a natureza, não, o planeta Terra inteiro se cansou de nós, está mandando tudo o que pode para nos destruir, é engraçado como não posso nem negar que, se este é o caso, que o planeta estaria errado Covid-19, desastres naturais, chuva de gafanhotos, uma quase terceira guerra mundial! Isso só no começo do ano.
+      Não queremos admitir que nossa vida é prejudicial a outras vidas, mesmo não querendo machucar a natureza fazemos isso sem nem mesmo perceber, mas são coisas que se pararmos de fazer muito provavelmente teríamos vidas miseráveis e esta é a realidade, os mais fortes sobrevivem, neste caso o humano dominou a natureza e aonde pisamos destruímos tudo a nossa volta para nossa própria sobrevivência é a assim e não vai deixar de ser assim por um bom tempo, bom isso se a natureza não nos destruir até o final deste ano. Uma das maiores provas de que o humano é um problema para o planeta Terra e para qualquer planeta realmente, é Chernobyl, um acidente trágico, até hoje um lugar que é impossível viver sem ser contaminado pela radiação que flui por lá, mas a radiação uma das coisas que consideramos muito letal para qualquer ser vivo na verdade não está sendo um problema, na verdade foi algo bom para a natureza, humanos deixaram aquele lugar, e a natureza, animais, plantas e tudo mais, conseguem viver ali, se acostumaram com a radiação, conseguem se acostumar com a radiação mas não conseguem se acostumar com nós, seres humanos.
+      Realmente chega a ser triste, mesmo se nós tentarmos muito, mas muito mesmo, não vamos coexistir com a natureza, vai ser assim até o mundo decidir se auto destruir para acabar com isso.`
     }
   ],
   cartoons: [

@@ -44,7 +44,7 @@ const Report: React.FC<props> = ({ navigation, route }) => {
   return (
     <Container>
       <StatusBar hidden={true}/>
-      <Cover {...{ scrollY, source: report.img }} />
+      <Cover {...{ scrollY, isVideo: report.isVideo, source: report.source }} />
 
       {/* <Title
         text={report.title.capitalize()}

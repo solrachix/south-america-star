@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Dimensions } from 'react-native'
 import Animated from 'react-native-reanimated'
 
-import { Container, Image, ImageLinearGradient } from './styles'
+import { Container, Image, Video, ImageLinearGradient } from './styles'
 
 export const MIN_HEADER_HEIGHT = 45
 export const HEADER_IMAGE_HEIGHT = 480
@@ -13,7 +13,7 @@ interface CoverProps {
 
 const { interpolate, Extrapolate } = Animated
 
-const Cover: React.FC<CoverProps> = ({ source, scrollY }) => {
+const Cover: React.FC<CoverProps> = ({ isVideo, source, scrollY }) => {
   const translateY = interpolate(scrollY, {
     inputRange: [
       0,
@@ -44,14 +44,32 @@ const Cover: React.FC<CoverProps> = ({ source, scrollY }) => {
           translateY: translateY
         }]
       }}>
-      <ImageLinearGradient />
-      <Image
-        source={source}
-        style={{ opacity }}
-      />
-      {/* <Animated.View
-        style={{{ ...StyleSheet.absoluteFillObject, backgroundColor: '#000', opacity }}}
-      /> */}
+
+      {
+        isVideo
+          ? (
+            <Video
+              source={source}
+              rate={1.0}
+              volume={1.0}
+              isMuted={false}
+              resizeMode="cover"
+              shouldPlay
+              isLooping
+              // useNativeControls={true}
+            />
+          )
+          : (
+            <>
+              <ImageLinearGradient />
+              <Image
+                source={source}
+                style={{ opacity }}
+              />
+            </>
+          )
+      }
+
     </Container>
   )
 }

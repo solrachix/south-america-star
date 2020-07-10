@@ -112,6 +112,15 @@ export const Image = styled.Image`
 
   resize-mode: cover;
 `
+
+export const Video = styled(video)`
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+
+  border-radius: 10px;
+`
+
 export const ReportText = styled(Text)`
   /* text-overflow: ellipsis; */
 
