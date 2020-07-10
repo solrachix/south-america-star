@@ -235,6 +235,19 @@ const Crossword: React.FC = () => {
             align="justify"
             size={16} weight={500}
           />
+
+          {
+            puzzleData.map(({ clue, position }) => (
+              <Text
+                key={position}
+                text={`${position + 1}-) ${clue}`}
+                style={{ marginBottom: 20 }}
+                color={theme.white}
+                align="justify"
+                size={16} weight={500}
+              />
+            ))
+          }
         </Modalize>
       </Portal>
     </Container>

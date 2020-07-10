@@ -4,11 +4,12 @@ import { ThemeContext } from 'styled-components'
 
 import Carousel from 'react-native-snap-carousel'
 import Text from '../../components/Text'
+import Report from './components/Report'
 import { Container, CarouselContainer, ImageBackground, Item, ItemLinearGradient, ItemAuthor, ReportItem, ReportContent, Column, ReportText, Image, Video } from './styles'
 
 import temporaryData from '../../temporaryData'
 
-const Home: React.FC = ({ modalizeRef, navigation, ...props }) => {
+const Home: React.FC = ({ modalizeRef, navigation }) => {
   const themeContext = useContext(ThemeContext)
   const [cartoons, setCartoons] = useState(temporaryData.cartoons)
   const [reports, setReports] = useState(temporaryData.reports)
@@ -64,20 +65,16 @@ const Home: React.FC = ({ modalizeRef, navigation, ...props }) => {
           <ReportItem
             key={report.id}
             // onPress={() => modalizeRef.current?.open() }
-            onPress={() => navigation.push('report', { report }) }
+            // onPress={() => navigation.push('report', { report }) }
           >
             {
               report.isVideo
                 ? (
                   <Video
                     source={report.source}
-                    rate={1.0}
-                    volume={1.0}
                     isMuted={false}
                     resizeMode="cover"
-                    shouldPlay
-                    isLooping
-                    // useNativeControls={true}
+                    shouldPlay={false}
                   />
                 )
                 : <Image resizeMode="center" source={!report.isVideo && report.source} />
@@ -101,6 +98,8 @@ const Home: React.FC = ({ modalizeRef, navigation, ...props }) => {
 
         keyExtractor={report => report.id}
       />
+
+      <Report />
     </Container>
   )
 }

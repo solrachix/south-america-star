@@ -3,6 +3,8 @@ import { rgba } from 'polished'
 import { LinearGradient } from 'expo-linear-gradient'
 import Text from '../../components/Text'
 
+import { Video as video } from 'expo-av'
+
 export const Container = styled.ScrollView`
   flex: 1;
   

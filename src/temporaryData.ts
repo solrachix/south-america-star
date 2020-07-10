@@ -1,7 +1,8 @@
 import charge from './assets/images/charge.png'
 import reportagem1 from './assets/images/reportagem_1.jpg'
+import reportagem2 from './assets/images/ano2020.png'
 
-import teste from './assets/videos/teste.mp4'
+import amostra3B from './assets/videos/amostra3B.mp4'
 
 import leao from './assets/images/horoscopos/leao.png'
 import aquario from './assets/images/horoscopos/aquario.png'
@@ -52,7 +53,7 @@ export default {
       ],
       date: '08/07/2020',
       isVideo: true,
-      source: teste,
+      source: amostra3B,
       title: 'Reportagem 2 - texto jornalístico',
       content: `Nem a quarentena, que já dura quase quatro meses, não conseguiu parar a amostra de Matemática da ETEC Anhanguera! Uma atração se destacou entre as outras pelo alcance, curtidas e quantidade de compartilhamentos. Em uma produção cinematográfica com direito a trilha sonora, a equipe fez uma viagem de avião, e a bordo do vôo 3-B da Bartocompany, passaram por todos os continentes do planeta, mostrando diversas construções famosas.
       Cada grupo escolheu um monumento do continente responsável. O tour passou
@@ -82,7 +83,7 @@ export default {
       ],
       date: '08/07/2020',
       isVideo: false,
-      source: reportagem1,
+      source: reportagem2,
       title: 'O desastre 2020',
       content: `Na situação que estamos hoje não podemos negar que todos no mundo inteiro estão preocupado não é? Para falar a verdade, gostaria de afirmar isso, mas infelizmente não é o caso, a única obrigação que nós humanos temos agora é respeitar a quarentena para salvar não só nós mesmos, mas pessoas a nossa volta e assim conseguiríamos passar por essa situação difícil o mais rápido possível, mas como disse este não é o caso, as pessoas só pensam em si mesma hoje em dia, empatia não é mais algo obrigatório para ser uma pessoa melhor, está mais para um traço de personalidade ou algo opcional, e não deveria ser assim.
       Essa ignorância, do ser humano, já passou dos limites, até hoje acho que este ano foi o ano em que a natureza, não, o planeta Terra inteiro se cansou de nós, está mandando tudo o que pode para nos destruir, é engraçado como não posso nem negar que, se este é o caso, que o planeta estaria errado Covid-19, desastres naturais, chuva de gafanhotos, uma quase terceira guerra mundial! Isso só no começo do ano.
@@ -93,23 +94,23 @@ export default {
   cartoons: [
     {
       id: 1,
-      author: 'seila',
-      img: reportagem1
+      author: 'Charge',
+      img: charge
     },
     {
       id: 2,
-      author: 'seila',
+      author: 'Charge',
       img: charge
     },
     {
       id: 3,
-      author: 'seila',
+      author: 'Charge',
       img: charge
     },
     {
       id: 4,
-      author: 'seila',
-      img: charge
+      author: 'Charge',
+      img: reportagem1
     }
   ],
   horoscopes: [
