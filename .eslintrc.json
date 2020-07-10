@@ -1,0 +1,52 @@
+{
+  "env": {
+    "browser": true,
+    "react-native/react-native": true,
+    "es2020": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "standard",
+    "plugin:react/recommended",
+    "plugin:react-native/all",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-native",
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "react-native/no-inline-styles": "off",
+    "react-native/no-empty-interface": "off",
+    "react/display-name": "off",
+    "react/prop-types": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {} 
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}
