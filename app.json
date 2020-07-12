@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "newspaper-app",
-    "slug": "newspaper-app",
+    "name": "south-america-star",
+    "slug": "South America Star",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#191B21"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -18,9 +18,6 @@
     ],
     "ios": {
       "supportsTablet": true
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
     }
   }
 }
