@@ -10,6 +10,7 @@ interface props {
   color?: string;
   weight?: string | number;
   numberOfLines?: number;
+  style?: unknown;
 }
 
 const TextComponent: React.FC<props> = ({ text, ...props }) => {
@@ -25,7 +26,8 @@ TextComponent.propTypes = {
     'normal', 'bold',
     100, 200, 300, 400, 500, 600, 700, 800, 900
   ]),
-  numberOfLines: PropTypes.number
+  numberOfLines: PropTypes.number,
+  style: PropTypes.object
 }
 
 TextComponent.defaultProps = {

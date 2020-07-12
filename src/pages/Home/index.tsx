@@ -1,19 +1,45 @@
-import React, { useState, useContext } from 'react'
-import { FlatList, StyleSheet } from 'react-native'
+import React, { useState, useContext, useRef } from 'react'
+import Animated from 'react-native-reanimated'
+import { FlatList, StyleSheet, Dimensions } from 'react-native'
 import { ThemeContext } from 'styled-components'
+
+import thumb from '../../assets/images/thumb.jpg'
+
+import { Modalize } from 'react-native-modalize'
+import { Portal } from 'react-native-portalize'
 
 import Carousel from 'react-native-snap-carousel'
 import Text from '../../components/Text'
-import Report from './components/Report'
+// import Report from './components/Report'
+import ReportHeader from './components/ReportHeader'
+import ReportBody from './components/ReportBody'
 import { Container, CarouselContainer, ImageBackground, Item, ItemLinearGradient, ItemAuthor, ReportItem, ReportContent, Column, ReportText, Image, Video } from './styles'
 
 import temporaryData from '../../temporaryData'
 
-const Home: React.FC = ({ modalizeRef, navigation }) => {
-  const themeContext = useContext(ThemeContext)
+interface Report {
+    id: number;
+    authors: string[];
+    avatar: string;
+    date: string;
+    isVideo: boolean;
+    source: string;
+    title: string;
+    content: string;
+}
+
+const Home: React.FC = ({ navigation }) => {
+  const scrollY = new Animated.Value(150)
+  const theme = useContext(ThemeContext)
+  const modalizeRef = useRef<Modalize>(null)
   const [cartoons, setCartoons] = useState(temporaryData.cartoons)
   const [reports, setReports] = useState(temporaryData.reports)
+  const [report, setReport] = useState<Report | null>(null)
 
+  const handleReport = (report: Report) => {
+    setReport(report)
+    return modalizeRef.current?.open()
+  }
   return (
     <Container>
 
@@ -64,42 +90,64 @@ const Home: React.FC = ({ modalizeRef, navigation }) => {
         renderItem={({ item: report }) => (
           <ReportItem
             key={report.id}
-            // onPress={() => modalizeRef.current?.open() }
-            onPress={() => navigation.push('report', { report }) }
+            onPress={() => handleReport(report) }
+            // onPress={() => navigation.push('report', { report }) }
           >
             {
               report.isVideo
-                ? (
-                  <Video
-                    source={report.source}
-                    isMuted={false}
-                    resizeMode="cover"
-                    shouldPlay={false}
-                  />
-                )
+                ? <Image resizeMode="center" source={thumb} />
                 : <Image resizeMode="center" source={!report.isVideo && report.source} />
             }
             <ReportContent>
               <Column width={80} >
                 <Text
                   text={report.authors.map(word => word.split(' ')[0].toLowerCase().capitalize()).join(', ')}
-                  size={10} color={themeContext.orange} weight={700} />
+                  size={10} color={theme.orange} weight={700} />
                 <Text text={report.date} size={14} weight={500} />
               </Column>
               <Column width={20} >
                 {/* <AntDesign name="sharealt" size={24} color={theme.orange} /> */}
               </Column>
-              {/* <Text text={report.author} color={themeContext.orange} size={18} weight={400} />
+              {/* <Text text={report.author} color={theme.orange} size={18} weight={400} />
               <ReportText numberOfLines={1} text={report.content} size={14} weight={200} /> */}
             </ReportContent>
 
           </ReportItem>
         )}
 
-        keyExtractor={report => report.id}
+        // keyExtractor={report => report.id}
       />
 
-      <Report />
+      {/* <Report /> */}
+
+      <Portal>
+        <Modalize
+          ref={modalizeRef}
+
+          modalStyle={{ backgroundColor: theme.background.dark }}
+          modalHeight={Dimensions.get('window').height}
+
+          handleStyle={{ backgroundColor: theme.orange }}
+          handlePosition="inside"
+
+          openAnimationConfig={{
+            timing: { duration: 200 },
+            spring: {
+              speed: 0,
+              bounciness: 0
+            }
+          }}
+
+          HeaderComponent={() => report && (
+            <ReportHeader
+              { ...report }
+              scrollY={scrollY}
+            />
+          )}
+        >
+          { report && <ReportBody content={report.content} scrollY={scrollY} /> }
+        </Modalize>
+      </Portal>
     </Container>
   )
 }

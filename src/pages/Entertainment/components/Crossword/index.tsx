@@ -208,7 +208,7 @@ const Crossword: React.FC = () => {
                     key={`${option}-${index2}`}
                     disabled={isNumber(option)}
                     editable={!isNumber(option)}
-                  >{isNumber(option) || option}</Td>
+                  >{/* isNumber(option) || option */}</Td>
                 ))
               }
             </Tr>

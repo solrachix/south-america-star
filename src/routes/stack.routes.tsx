@@ -7,7 +7,6 @@ import { Host } from 'react-native-portalize'
 import Header from '../components/HeaderStackNavigation'
 
 import BottomTabs from './bottonTabs.routes'
-import Report from '../pages/Report'
 import Cartoon from '../pages/Cartoon'
 
 const Stack = createStackNavigator()
@@ -34,7 +33,6 @@ const Routes: React.FC = () => {
           mode="modal"
         >
           <Stack.Screen name="Home" component={BottomTabs} options={{ headerShown: false }} />
-          <Stack.Screen name="report" component={Report} />
           <Stack.Screen name="cartoon" component={Cartoon}
             options={{
               gestureEnabled: true,

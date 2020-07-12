@@ -6,6 +6,7 @@ interface props {
   size?: number;
   color?: string;
   weight?: string | number;
+  style?: unknown
 }
 
 export const Text = styled.Text`${(props: props) => css`

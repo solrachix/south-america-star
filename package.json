@@ -11,6 +11,7 @@
     "@expo-google-fonts/roboto": "^0.1.0",
     "@expo-google-fonts/ubuntu": "^0.1.0",
     "@expo/vector-icons": "^10.2.0",
+    "@react-native-community/blur": "^3.6.0",
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/bottom-tabs": "^5.6.1",
     "@react-navigation/material-top-tabs": "^5.2.12",
@@ -20,7 +21,6 @@
     "eslint-plugin-react-native": "^3.8.1",
     "expo": "~38.0.8",
     "expo-av": "~8.2.1",
-    "expo-blur": "~8.1.2",
     "expo-constants": "~9.1.1",
     "expo-status-bar": "^1.0.0",
     "polished": "^3.6.5",
@@ -29,7 +29,6 @@
     "react-dom": "~16.11.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.1.tar.gz",
     "react-native-animated-header": "^1.0.7",
-    "react-native-blur": "^3.2.2",
     "react-native-color-matrix-image-filters": "^5.2.5",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-image-pan-zoom": "^2.1.12",
@@ -43,7 +42,7 @@
     "react-native-svg": "12.1.0",
     "react-native-tab-view": "^2.14.4",
     "react-native-web": "~0.11.7",
-    "react-native-webview": "9.4.0",
+    "react-native-youtube": "^2.0.1",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {

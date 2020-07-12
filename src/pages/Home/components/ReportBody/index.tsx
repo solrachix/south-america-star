@@ -2,32 +2,22 @@ import React, { useContext } from 'react'
 import { StyleSheet } from 'react-native'
 import Animated from 'react-native-reanimated'
 import { ThemeContext } from 'styled-components'
-import { AntDesign } from '@expo/vector-icons'
 
 import Text from '../../../../components/Text'
-import { Container, Header, Avatar, HeaderContent, Column } from './styles'
+import { Container } from './styles'
 
-import { HEADER_IMAGE_HEIGHT } from '../Cover'
+import { HEADER_IMAGE_HEIGHT } from '../ReportHeader'
 
-export const scrollRangeForAnimation = 100
 const {
   interpolate, Extrapolate
 } = Animated
 
 interface props {
   scrollY: Animated.Value<number>;
-  report: {
-    id: number;
-    authors: string[];
-    avatar: string;
-    date: string
-    source: string;
-    title: string;
-    content: string;
-  }
+  content: string;
 }
 
-const Body: React.FC<props> = ({ report, scrollY }) => {
+const Body: React.FC<props> = ({ content, scrollY }) => {
   const theme = useContext(ThemeContext)
 
   const translateY = interpolate(scrollY, {
@@ -41,7 +31,7 @@ const Body: React.FC<props> = ({ report, scrollY }) => {
   })
   const styles = StyleSheet.create({
     contentContainer: {
-      paddingBottom: 40,
+      paddingBottom: 0,
       paddingVertical: 10
     }
   })
@@ -66,25 +56,11 @@ const Body: React.FC<props> = ({ report, scrollY }) => {
       // scrollEventThrottle={1}
       // stickyHeaderIndices={[1]}
     >
-
-      <Header >
-        <Avatar source={{ uri: report.avatar }} />
-        <HeaderContent>
-          <Column width={80} >
-            <Text text={report.authors.map(word => word.split(' ')[0].toLowerCase().capitalize()).join(', ')} weight={700} />
-            <Text text={report.date} size={14} weight={500} />
-          </Column>
-          <Column width={20} >
-            <AntDesign name="sharealt" size={24} color={theme.orange} />
-          </Column>
-        </HeaderContent>
-      </Header>
-
       <Text
-        text={report.content}
+        text={content}
         align="auto"
-        size={16}
-        weight={500}
+        color={theme.white}
+        size={16} weight={500}
       />
     </Container>
   )

@@ -1,4 +1,5 @@
-import React, { useRef, useContext, useEffect, useState, useCallback, memo } from 'react'
+import React, { useRef, useContext, useEffect, useState, memo } from 'react'
+import { ActivityIndicator } from 'react-native'
 import { ThemeContext } from 'styled-components'
 
 import randomLetter from '../../../../utils/randomLetter'
@@ -6,7 +7,7 @@ import randomLetter from '../../../../utils/randomLetter'
 import { Modalize } from 'react-native-modalize'
 import { Portal } from 'react-native-portalize'
 import P from '../../../../components/Text'
-import { Container, Table, Tr, Td, Text } from './styles'
+import { Container, Loading, Table, Tr, Td, Text, Icons, ButtonContainer, Button } from './styles'
 
 interface wordSearchProps {
   id: number;
@@ -135,25 +136,25 @@ const wordSearchData: wordSearchProps[] = [
     end: null
   }
 ]
+const wordSearchGrid: string[][] = []
+const wordSearchGridToCompare: string[][] = []
+
+for (let i = 0; i < wordSearchLength; i++) {
+  const line: string[] = []
+  const lineTwo: string[] = []
+
+  for (let i = 0; i < wordSearchLength; i++) {
+    line.push(randomLetter())
+    lineTwo.push('0')
+  }
+  wordSearchGrid.push(line)
+  wordSearchGridToCompare.push(lineTwo)
+}
 
 const HuntingWords: React.FC = () => {
   const theme = useContext(ThemeContext)
   const modalizeRef = useRef<Modalize>(null)
-  const wordSearchGrid: string[][] = []
-  const wordSearchGridToCompare: string[][] = []
-  const [selectedItems, setSelectedItems] = useState<number[]>([])
-
-  for (let i = 0; i < wordSearchLength; i++) {
-    const line: string[] = []
-    const lineTwo: string[] = []
-
-    for (let i = 0; i < wordSearchLength; i++) {
-      line.push(randomLetter())
-      lineTwo.push(0)
-    }
-    wordSearchGrid.push(line)
-    wordSearchGridToCompare.push(lineTwo)
-  }
+  const [selectedItems, setSelectedItems] = useState<string[]>([])
 
   wordSearchData.map(({ orientation, answer, start, end }) => {
     const answerLength = answer.length
@@ -190,9 +191,45 @@ const HuntingWords: React.FC = () => {
 
   useEffect(() => () => modalizeRef.current?.close(), [])
 
-  const handleLetter = useCallback((lineIndex: number, columnIndex: number, column:string) => {
+  const handleLetter = (lineIndex: number, columnIndex: number, column:string) => {
+    const cordenation = `${lineIndex}-${columnIndex}`
     wordSearchGridToCompare[lineIndex][columnIndex] = column
-  }, [])
+    if (selectedItems.indexOf(cordenation) >= 0) {
+      setSelectedItems(selectedItems.filter(item => item !== cordenation))
+    } else {
+      setSelectedItems([...selectedItems, cordenation])
+    }
+  }
+
+  const handleCheck = () => {
+    const answers: string[][] = []
+
+    wordSearchData.map(({ orientation, answer, start, end }) => {
+      const answerLength = answer.length
+      const addressArrays = []
+
+      if (orientation === 'horizontal') {
+        for (let i = 0; i < answerLength; i++) {
+          if (start.inverted) {
+            addressArrays.push(`${start.line - 1}-${(start.column - answerLength) + i}`)
+          } else {
+            addressArrays.push(`${start.line - 1}-${(start.column - 1) + i}`)
+          }
+        }
+
+        answers.push(addressArrays)
+      }
+    })
+
+    // console.log(answers)
+    answers.map((indexs) => {
+      console.log(selectedItems.map(item => item))
+    })
+  }
+  const handleReset = () => {
+    wordSearchGridToCompare.length = 0
+    setSelectedItems([])
+  }
 
   return (
     <Container>
@@ -203,7 +240,11 @@ const HuntingWords: React.FC = () => {
             <Tr key={index} >
               {
                 line.map((column: string, index2: number) => (
-                  <Td key={`${column}-${index2}`} onPress={() => handleLetter(index, index2, column) }>
+                  <Td
+                    key={`${index}-${index2}`}
+                    actived={selectedItems.indexOf(`${index}-${index2}`) >= 0}
+                    onPress={() => handleLetter(index, index2, column) }
+                  >
                     <P text={column} size={14} style={{ textAlign: 'center', lineHeight: 30 }} />
                   </Td>
                 ))
@@ -212,6 +253,29 @@ const HuntingWords: React.FC = () => {
           ))
         }
       </Table>
+
+      <ButtonContainer>
+        <Button bg={theme.green} onPress={handleCheck} >
+          <Text
+            text={'Validar'}
+            style={{ width: '50%', marginTop: '10%' }}
+            color={theme.white}
+            align="center"
+            size={16} weight={700}
+          />
+          <Icons name="ios-checkmark" size={26} color={theme.background.dark} />
+        </Button>
+        <Button bg={theme.red} onPress={handleReset}>
+          <Text
+            text={'Resetar'}
+            style={{ width: '50%', marginTop: '10%' }}
+            color={theme.white}
+            align="center"
+            size={16} weight={700}
+          />
+          <Icons name="ios-close" size={26} color={theme.background.dark} />
+        </Button>
+      </ButtonContainer>
 
       <Portal>
         <Modalize
@@ -239,6 +303,14 @@ const HuntingWords: React.FC = () => {
 
         </Modalize>
       </Portal>
+
+      {/* <Loading
+        blurType="light"
+        blurAmount={10}
+        reducedTransparencyFallbackColor="white"
+      >
+        <ActivityIndicator size="large" color={theme.orange} />
+      </Loading> */}
     </Container>
   )
 }

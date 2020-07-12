@@ -37,7 +37,7 @@ interface Horoscope {
   img: string;
 }
 const Horoscopos: React.FC<props> = ({ navigation }) => {
-  const [horoscope, setHoroscope] = useState<Horoscope>({})
+  const [horoscope, setHoroscope] = useState<Horoscope | null>(null)
   const theme = useContext(ThemeContext)
   const modalizeRef = useRef<Modalize>(null)
 
@@ -115,10 +115,10 @@ const Horoscopos: React.FC<props> = ({ navigation }) => {
           ref={modalizeRef}
           modalStyle={{ padding: 20, backgroundColor: theme.background.dark }}
           snapPoint={300}
-          HeaderComponent={() => <Text text={horoscope?.title} style={{ marginBottom: 20 }} color={theme.orange} size={24} weight={700} />}
+          HeaderComponent={() => <Text text={horoscope?.title || ''} style={{ marginBottom: 20 }} color={theme.orange} size={24} weight={700} />}
         >
           <Text
-            text={horoscope?.content}
+            text={horoscope?.content || ''}
             // text={horoscope?.content.replace(/(\r\n|\n|\r)/gm, '')}
             color={theme.white}
             align="justify"
