@@ -1,4 +1,5 @@
 import styled from 'styled-components/native'
+import { Ionicons } from '@expo/vector-icons'
 
 export const Container = styled.View`
   flex: 1;
@@ -49,4 +50,33 @@ export const Td = styled.TextInput.attrs((/** props */) => ({
 
   text-align: center;
   align-items: center;
+`
+
+export const ButtonContainer = styled.View`
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;  
+`
+
+interface ButtonProps {
+  bg: string
+}
+export const Button = styled.TouchableOpacity<ButtonProps>`
+  width: 48%;
+  height: 40px;
+
+  background: ${props => props.bg};
+  border-radius: 5px;
+
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+`
+
+export const Icons = styled(Ionicons)`
+
 `

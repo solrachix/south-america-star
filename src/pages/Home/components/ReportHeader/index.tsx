@@ -71,34 +71,11 @@ const ReportHeader: React.FC<ReportHeaderProps> = ({
         }]
       }}>
 
-      <ImageLinearGradient />
-      <Image
-        source={source}
-        style={{ opacity }}
-      />
-
-      <Header >
-        <Avatar source={{ uri: avatar }} />
-        <HeaderContent>
-          <Column width={75} >
-            <Text
-              text={authors.map(word => word.split(' ')[0].toLowerCase().capitalize()).join(', ')}
-              size={14}
-              weight={700}
-            />
-            <Text text={date} size={14} weight={500} />
-          </Column>
-          <Column width={25} >
-            <AntDesign name="sharealt" size={20} color={theme.orange} />
-          </Column>
-        </HeaderContent>
-      </Header>
-
-      {/* {
+      {
         isVideo
           ? (
             <Video
-              source={source}
+              source={{ uri: 'https://vimeo.com/user119369928/review/437477254/e96cbc6854' }}
               rate={1.0}
               volume={1.0}
               isMuted={false}
@@ -117,7 +94,24 @@ const ReportHeader: React.FC<ReportHeaderProps> = ({
               />
             </>
           )
-      } */}
+      }
+
+      <Header >
+        <Avatar source={{ uri: avatar }} />
+        <HeaderContent>
+          <Column width={75} >
+            <Text
+              text={authors.map(word => word.split(' ')[0].toLowerCase().capitalize()).join(', ')}
+              size={14}
+              weight={700}
+            />
+            <Text text={date} size={14} weight={500} />
+          </Column>
+          <Column width={25} >
+            <AntDesign name="sharealt" size={20} color={theme.orange} />
+          </Column>
+        </HeaderContent>
+      </Header>
 
     </Container>
   )
