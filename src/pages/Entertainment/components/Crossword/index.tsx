@@ -204,13 +204,6 @@ const Crossword: React.FC = () => {
             {
               puzzleGrid.map((line: number[] | string[], index: number) => (
                 <Tr key={index} >
-                  <Text
-                    text={index.toString()}
-                    style={{ width: '5%' }}
-                    color={theme.white}
-                    align="center"
-                    size={10}
-                  />
                   {
                     line.map((option: number | string, index2: number) => (
                       <Td
