@@ -16,16 +16,16 @@ const Modal: React.FC<Props> = ({
   open = false,
   HeaderComponent = null,
   children,
-  headerLeft = () => <></>,
-  title = () => <></>,
-  headerRight = () => <></>,
+  headerLeft = React.Children,
+  title = React.Children,
+  headerRight = React.Children,
   ...props
 }) => {
   const modalizeRef = useRef<Modalize>(null)
 
   useEffect(() => {
     console.log(open)
-    modalizeRef.current?.open()
+    return modalizeRef.current?.open()
   }, [])
 
   return (
@@ -36,13 +36,13 @@ const Modal: React.FC<Props> = ({
         HeaderComponent={ () => HeaderComponent || (
           <Header>
             <View align="flex-start" >
-              {headerLeft()}
+              {headerLeft}
             </View>
             <View>
-              {title()}
+              {title}
             </View>
             <View align="flex-end">
-              {headerRight()}
+              {headerRight}
             </View>
           </Header>
         )}

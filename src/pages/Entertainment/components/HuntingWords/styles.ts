@@ -32,7 +32,6 @@ export const Tr = styled.View`
 `
 
 interface TdProps {
-  borderRadius: boolean;
   actived: boolean;
 }
 

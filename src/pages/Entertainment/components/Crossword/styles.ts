@@ -6,7 +6,6 @@ export const Container = styled.View`
   
   background-color: #191B21;
 `
-// Table, Tbody, Tr
 
 export const Table = styled.View`
   min-width: 100%;

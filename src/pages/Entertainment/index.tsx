@@ -6,8 +6,6 @@ import { Ionicons as Icon } from '@expo/vector-icons'
 
 import crossword from '../../assets/images/crossword.png'
 
-// import Modal from '../../components/Modal'
-
 import { Modalize } from 'react-native-modalize'
 import { Portal } from 'react-native-portalize'
 

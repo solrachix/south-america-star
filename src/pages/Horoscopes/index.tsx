@@ -82,9 +82,8 @@ const Horoscopos: React.FC<props> = ({ navigation }) => {
   }
 
   const onOpen = (horoscope: Horoscope) => {
-    modalizeRef.current?.open()
-
     setHoroscope(horoscope)
+    return modalizeRef.current?.open()
   }
   return (
     <>

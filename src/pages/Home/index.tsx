@@ -10,7 +10,6 @@ import { Portal } from 'react-native-portalize'
 
 import Carousel from 'react-native-snap-carousel'
 import Text from '../../components/Text'
-// import Report from './components/Report'
 import ReportHeader from './components/ReportHeader'
 import ReportBody from './components/ReportBody'
 import { Container, CarouselContainer, ImageBackground, Item, ItemLinearGradient, ItemAuthor, ReportItem, ReportContent, Column, ReportText, Image, Video } from './styles'
@@ -91,7 +90,6 @@ const Home: React.FC = ({ navigation }) => {
           <ReportItem
             key={report.id}
             onPress={() => handleReport(report) }
-            // onPress={() => navigation.push('report', { report }) }
           >
             {
               report.isVideo
@@ -105,11 +103,6 @@ const Home: React.FC = ({ navigation }) => {
                   size={10} color={theme.orange} weight={700} />
                 <Text text={report.date} size={14} weight={500} />
               </Column>
-              <Column width={20} >
-                {/* <AntDesign name="sharealt" size={24} color={theme.orange} /> */}
-              </Column>
-              {/* <Text text={report.author} color={theme.orange} size={18} weight={400} />
-              <ReportText numberOfLines={1} text={report.content} size={14} weight={200} /> */}
             </ReportContent>
 
           </ReportItem>
@@ -117,8 +110,6 @@ const Home: React.FC = ({ navigation }) => {
 
         // keyExtractor={report => report.id}
       />
-
-      {/* <Report /> */}
 
       <Portal>
         <Modalize

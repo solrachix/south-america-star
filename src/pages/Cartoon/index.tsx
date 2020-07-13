@@ -1,8 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Dimensions } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
-import { ThemeContext } from 'styled-components'
-import { Container, Image, Button, ArrowBack } from './styles'
+import { Container, Image } from './styles'
 
 interface props {
   navigation: {
@@ -24,7 +23,6 @@ interface props {
 }
 
 const Cartoon: React.FC<props> = ({ navigation, route }) => {
-  const theme = useContext(ThemeContext)
   const { cartoon } = route.params
   const cropWidth = Dimensions.get('window').width
   const cropHeight = Dimensions.get('window').height
@@ -32,11 +30,6 @@ const Cartoon: React.FC<props> = ({ navigation, route }) => {
   navigation.setOptions({
     transparent: true,
     title: false
-    // headerLeft: () => (
-    //   <Button onPress={() => navigation.goBack() }>
-    //     <ArrowBack color={theme.white} />
-    //   </Button>
-    // )
   })
 
   return (
