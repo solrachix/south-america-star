@@ -51,7 +51,7 @@ export default {
       ],
       date: '08/07/2020',
       isVideo: true,
-      source: { uri: 'https://vimeo.com/user119369928/review/437477254/e96cbc6854' },
+      source: { uri: 'https://vod-progressive.akamaized.net/exp=1594635615~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2495%2F17%2F437477254%2F1909041575.mp4~hmac=13ceb958faf13330ca3f38626b34b1c7a288e28d894c65bb63702dadcbcc82e0/vimeo-prod-skyfire-std-us/01/2495/17/437477254/1909041575.mp4' },
       title: 'Reportagem 2 - texto jornalístico',
       content: `Nem a quarentena, que já dura quase quatro meses, não conseguiu parar a amostra de Matemática da ETEC Anhanguera! Uma atração se destacou entre as outras pelo alcance, curtidas e quantidade de compartilhamentos. Em uma produção cinematográfica com direito a trilha sonora, a equipe fez uma viagem de avião, e a bordo do vôo 3-B da Bartocompany, passaram por todos os continentes do planeta, mostrando diversas construções famosas.
       Cada grupo escolheu um monumento do continente responsável. O tour passou

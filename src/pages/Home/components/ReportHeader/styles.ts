@@ -31,6 +31,13 @@ export const Image = styled(Animated.Image)<ImageProps>`
 export const Video = styled(video)`
   width: 100%;
   height: 300px;
+
+  margin-bottom: 10px;
+  
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  z-index: 1;
 `
 
 export const ImageLinearGradient = styled(LinearGradient).attrs((/* props */) => ({

@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "south-america-star",
-    "slug": "South America Star",
+    "name": "south_america_star",
+    "slug": "south_america_star",
+    "description": "Newspaper APP",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,6 +19,9 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.solrachix.south_america_star"
     }
   }
 }

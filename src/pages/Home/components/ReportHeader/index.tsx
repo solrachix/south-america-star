@@ -71,23 +71,23 @@ const ReportHeader: React.FC<ReportHeaderProps> = ({
         }]
       }}>
 
+      <ImageLinearGradient />
       {
         isVideo
           ? (
             <Video
-              source={{ uri: 'https://vimeo.com/user119369928/review/437477254/e96cbc6854' }}
+              source={source}
               rate={1.0}
               volume={1.0}
               isMuted={false}
-              resizeMode="contain"
+              resizeMode="cover"
               shouldPlay
               isLooping
-              // useNativeControls={true}
+              useNativeControls={true}
             />
           )
           : (
             <>
-              <ImageLinearGradient />
               <Image
                 source={source}
                 style={{ opacity }}

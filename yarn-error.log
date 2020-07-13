@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-webview@9.4.0
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-native-video
 
 PATH: 
   C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Jickj\bin;C:\Python38\Scripts;C:\Python38;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Python27;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin;C:\Program Files\nodejs;C:\Users\Jickj\AppData\Local\Microsoft\WindowsApps;C:\Users\Jickj\AppData\Local\hyper\app-3.0.2\resources\bin;C:\ProgramData\Jickj\hyper\app-3.0.2\resources\bin;C:\Users\Jickj\AppData\Local\Yarn\bin;C:\Users\Jickj\AppData\Roaming\npm;C:\Users\Jickj\AppData\Local\Programs\Microsoft VS Code\bin
@@ -30,6 +30,7 @@ npm manifest:
       "@expo-google-fonts/roboto": "^0.1.0",
       "@expo-google-fonts/ubuntu": "^0.1.0",
       "@expo/vector-icons": "^10.2.0",
+      "@react-native-community/blur": "^3.6.0",
       "@react-native-community/masked-view": "0.1.10",
       "@react-navigation/bottom-tabs": "^5.6.1",
       "@react-navigation/material-top-tabs": "^5.2.12",
@@ -39,7 +40,6 @@ npm manifest:
       "eslint-plugin-react-native": "^3.8.1",
       "expo": "~38.0.8",
       "expo-av": "~8.2.1",
-      "expo-blur": "~8.1.2",
       "expo-constants": "~9.1.1",
       "expo-status-bar": "^1.0.0",
       "polished": "^3.6.5",
@@ -48,7 +48,6 @@ npm manifest:
       "react-dom": "~16.11.0",
       "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.1.tar.gz",
       "react-native-animated-header": "^1.0.7",
-      "react-native-blur": "^3.2.2",
       "react-native-color-matrix-image-filters": "^5.2.5",
       "react-native-gesture-handler": "^1.6.1",
       "react-native-image-pan-zoom": "^2.1.12",
@@ -62,6 +61,7 @@ npm manifest:
       "react-native-svg": "12.1.0",
       "react-native-tab-view": "^2.14.4",
       "react-native-web": "~0.11.7",
+      "react-native-youtube": "^2.0.1",
       "styled-components": "^5.1.1"
     },
     "devDependencies": {
@@ -1204,6 +1204,13 @@ Lockfile:
       "@types/istanbul-reports" "^1.1.1"
       "@types/yargs" "^15.0.0"
       chalk "^3.0.0"
+  
+  "@react-native-community/blur@^3.6.0":
+    version "3.6.0"
+    resolved "https://registry.yarnpkg.com/@react-native-community/blur/-/blur-3.6.0.tgz#31c9e0f2770519c9b5c4f99418f192246f0d4db8"
+    integrity sha512-GtDBhpX2pQcjl4VopOC8FktrVufrEfYRwVeMQ2WWckqKIv2BdwvlvWvj88L1WmEdBr9UNcm3rtgz+d+YXkmirA==
+    dependencies:
+      prop-types "^15.5.10"
   
   "@react-native-community/cli-debugger-ui@^4.9.0":
     version "4.9.0"
@@ -3206,13 +3213,6 @@ Lockfile:
       lodash "^4.17.15"
       nullthrows "^1.1.0"
       prop-types "15.7.2"
-  
-  expo-blur@~8.1.2:
-    version "8.1.2"
-    resolved "https://registry.yarnpkg.com/expo-blur/-/expo-blur-8.1.2.tgz#d8f12d6492f3df264a1eaae8a15c22b3a283375e"
-    integrity sha512-Z/NCe59rDR9D54FEZNisRybZwihfE9EQfolgchmra9wt89eryXMtxR9ciHn6n0F/BImOiS6UhzQZIE4SRs76Eg==
-    dependencies:
-      prop-types "^15.6.0"
   
   expo-constants@~9.1.1:
     version "9.1.1"
@@ -5537,7 +5537,7 @@ Lockfile:
     dependencies:
       asap "~2.0.3"
   
-  prop-types@15.7.2, prop-types@^15.5.10, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+  prop-types@15.7.2, prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
     version "15.7.2"
     resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
     integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -5632,13 +5632,6 @@ Lockfile:
       fbemitter "^2.1.1"
       invariant "^2.2.4"
       use-subscription "^1.0.0"
-  
-  react-native-blur@^3.2.2:
-    version "3.2.2"
-    resolved "https://registry.yarnpkg.com/react-native-blur/-/react-native-blur-3.2.2.tgz#5bfb50638d148982c9560436554ed01d77d6d07d"
-    integrity sha512-r7zNQISL7kQX5ocQEet5QVOBzoXP+Nr3dO7Wql+fV6rebx/8I7eAUHnfITDx12WoOmRpiJjbt/4xF5gTEll6Uw==
-    dependencies:
-      prop-types "^15.5.10"
   
   react-native-color-matrix-image-filters@^5.2.5:
     version "5.2.5"
@@ -5740,6 +5733,13 @@ Lockfile:
       normalize-css-color "^1.0.2"
       prop-types "^15.6.0"
       react-timer-mixin "^0.13.4"
+  
+  react-native-youtube@^2.0.1:
+    version "2.0.1"
+    resolved "https://registry.yarnpkg.com/react-native-youtube/-/react-native-youtube-2.0.1.tgz#1b6275ca2c1db8e13539a59ccfda8ae8479b1590"
+    integrity sha512-CVzJyynKoEEMXHv/Nx+s8HdovnfVIZs0DIUjWUQsgEd+kbBubXJZTguCKj4WigI8SI1LJ0thF8SEGbdqW8oJkw==
+    dependencies:
+      prop-types "^15.5.0"
   
   "react-native@https://github.com/expo/react-native/archive/sdk-38.0.1.tar.gz":
     version "0.62.2"
