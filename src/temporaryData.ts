@@ -41,7 +41,7 @@ export default {
     },
     {
       id: 2,
-      avatar: 'https://source.unsplash.com/random/?people,care',
+      avatar: 'https://source.unsplash.com/random/?people,man',
       authors: [
         'ANA LUIZA DA MOTA FERREIRA',
         'BEATRIZ DE PAIVA LINS',
@@ -51,24 +51,9 @@ export default {
       ],
       date: '08/07/2020',
       isVideo: true,
-      source: { uri: 'https://vod-progressive.akamaized.net/exp=1594635615~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2495%2F17%2F437477254%2F1909041575.mp4~hmac=13ceb958faf13330ca3f38626b34b1c7a288e28d894c65bb63702dadcbcc82e0/vimeo-prod-skyfire-std-us/01/2495/17/437477254/1909041575.mp4' },
+      source: { uri: 'https://player.vimeo.com/video/437477254' },
       title: 'Reportagem 2 - texto jornalístico',
-      content: `Nem a quarentena, que já dura quase quatro meses, não conseguiu parar a amostra de Matemática da ETEC Anhanguera! Uma atração se destacou entre as outras pelo alcance, curtidas e quantidade de compartilhamentos. Em uma produção cinematográfica com direito a trilha sonora, a equipe fez uma viagem de avião, e a bordo do vôo 3-B da Bartocompany, passaram por todos os continentes do planeta, mostrando diversas construções famosas.
-      Cada grupo escolheu um monumento do continente responsável. O tour passou
-      por diversos lugares: a Catedral de Notre Dame, a Ponte JK, a Pirâmide de Queóps
-      (conhecida como Grande Pirâmide), a Casa de Ópera de Sydney, o zigurate de
-      Tchoga Zanbil, o Parque Nacional Tikal, e o Gateway Arch. Desde a Europa até a
-      América do Norte, foram apresentadas as histórias das construções, e é claro, seus
-      conceitos matemáticos.
-      A viagem foi realizada sob direção do empresário e dono das linhas aéreas
-      Bartocompany, Netinho Santos Nascimento. "A matemática está em todo lugar,
-      precisamos apenas prestar atenção para vê-la e entendê-la. Todo ano, procuramos
-      uma maneira diferente de mostrar isso para o público da Mostra de Matemática", diz
-      o empresário. O tour matemático está disponível na Internet, para ser visto quantas
-      vezes quiser.
-      E aí? Se interessou pela ideia? Segue o link do vídeo, conhecimento nunca é
-      demais!”.
-      Por fim, pedimos a professora uma sugestão, para facilitar o ensino da Geometria Espacial no método EAD – por motivos da pandemia causada pelo vírus Covid-19. Sheila Abdala sugere: “Minha dica é abusar da tecnologia. Gravar vídeo aula das explicações e fazer aulas pelo google meet, para discutir as situações com os alunos”.`
+      content: 'Nem a quarentena, que já dura quase quatro meses, não conseguiu parar a amostra de Matemática da ETEC Anhanguera! Uma atração se destacou entre as outras pelo alcance, curtidas e quantidade de compartilhamentos. Em uma produção cinematográfica com direito a trilha sonora, a equipe fez uma viagem de avião, e a bordo do vôo 3-B da Bartocompany, passaram por todos os continentes do planeta, mostrando diversas construções famosas. Cada grupo escolheu um monumento do continente responsável. O tour passou por diversos lugares: a Catedral de Notre Dame, a Ponte JK, a Pirâmide de Queóps (conhecida como Grande Pirâmide), a Casa de Ópera de Sydney, o zigurate de Tchoga Zanbil, o Parque Nacional Tikal, e o Gateway Arch. Desde a Europa até a América do Norte, foram apresentadas as histórias das construções, e é claro, seus conceitos matemáticos. A viagem foi realizada sob direção do empresário e dono das linhas aéreas Bartocompany, Netinho Santos Nascimento. "A matemática está em todo lugar, precisamos apenas prestar atenção para vê-la e entendê-la. Todo ano, procuramos uma maneira diferente de mostrar isso para o público da Mostra de Matemática", diz o empresário. O tour matemático está disponível na Internet, para ser visto quantas vezes quiser. E aí? Se interessou pela ideia? Segue o link do vídeo, conhecimento nunca é demais!”. Por fim, pedimos a professora uma sugestão, para facilitar o ensino da Geometria Espacial no método EAD – por motivos da pandemia causada pelo vírus Covid-19. Sheila Abdala sugere: “Minha dica é abusar da tecnologia. Gravar vídeo aula das explicações e fazer aulas pelo google meet, para discutir as situações com os alunos”.'
     },
     {
       id: 3,
@@ -116,7 +101,8 @@ export default {
       id: 1,
       title: 'Aries',
       img: aries,
-      content: `Cuidado com suas emoções por esses dias, não tome decisões precipitadas, elas terão grande peso no seu futuro. Não se preocupe com a sorte, com sua autonomia você não precisa de sorte.
+      content: `
+      Cuidado com suas emoções por esses dias, não tome decisões precipitadas, elas terão grande peso no seu futuro. Não se preocupe com a sorte, com sua autonomia você não precisa de sorte.
       Dia da sorte: Todo dia é dia de sorte para um ariano, onde ele faz sua sorte
       Número da sorte: Todos os números estão a sua disposição pois você faz sua sorte. ��`
     },
@@ -124,7 +110,8 @@ export default {
       id: 2,
       title: 'Aquário',
       img: aquario,
-      content: `A confusão tem se tornado constante pelo ângulo de 60º do planeta Vênus, mas não se preocupe, assim que Vênus mudar seu ângulo tudo se normalizará. Não se preocupe com o que vem acontecendo, isso logo será resolvido e assim você poderá voltar a agir como antes.
+      content: `
+      A confusão tem se tornado constante pelo ângulo de 60º do planeta Vênus, mas não se preocupe, assim que Vênus mudar seu ângulo tudo se normalizará. Não se preocupe com o que vem acontecendo, isso logo será resolvido e assim você poderá voltar a agir como antes.
       Dia da sorte: Sexta-Feira
       Números da sorte: 6, 2 e 9.`
     },
@@ -132,7 +119,8 @@ export default {
       id: 3,
       title: 'Touro',
       img: touro,
-      content: `Sua alegria se torna contagiante e pode trazer felicidade para as pessoas ao seu redor, por isso mantenha sua forma de ser. Sua forma de lhe dar com as pessoas se torna uma dádiva, continue assim e você irá muito longe.
+      content: `
+      Sua alegria se torna contagiante e pode trazer felicidade para as pessoas ao seu redor, por isso mantenha sua forma de ser. Sua forma de lhe dar com as pessoas se torna uma dádiva, continue assim e você irá muito longe.
       Dia da sorte: Quinta-Feira
       Números da sorte: 1,6 e 13.`
     },
@@ -140,7 +128,8 @@ export default {
       id: 4,
       title: 'Leão',
       img: leao,
-      content: `Com uma personalidade forte e sempre notados por onde passam, leoninos são pessoas exuberantes. vivam sempre da sua maneira e não deixe que os julgamentos dos outros apague sua luz.
+      content: `
+      Com uma personalidade forte e sempre notados por onde passam, leoninos são pessoas exuberantes. vivam sempre da sua maneira e não deixe que os julgamentos dos outros apague sua luz.
       Números da sorte: 5, 10 e 89
       Dia da sorte: Domingo`
     },
@@ -148,7 +137,8 @@ export default {
       id: 5,
       title: 'Libra',
       img: libra,
-      content: `Com um grande coração e otimismo, pessoas de libra vivem com a cabeça nas nuvens e tem como representante a balança por referência ao equilíbrio. Continue sempre buscando a paz em todos os lugares que estiver
+      content: `
+      Com um grande coração e otimismo, pessoas de libra vivem com a cabeça nas nuvens e tem como representante a balança por referência ao equilíbrio. Continue sempre buscando a paz em todos os lugares que estiver
       Números da sorte: 6 e 40
       Dia da sorte: Sexta- feira`
     },
@@ -156,7 +146,8 @@ export default {
       id: 6,
       title: 'Peixes',
       img: peixes,
-      content: `Peixes sabem viver em sociedade, mesmo que, vez ou outra, se isolem. ...Apesar de nem sempre demonstrarem esse amor de forma convencional, com um abraço ou um “eu te amo”, as pessoas regidas pelo signo de Peixes são eternas apaixonadas e muito, mas muito sonhadoras.
+      content: `
+      Peixes sabem viver em sociedade, mesmo que, vez ou outra, se isolem. ...Apesar de nem sempre demonstrarem esse amor de forma convencional, com um abraço ou um “eu te amo”, as pessoas regidas pelo signo de Peixes são eternas apaixonadas e muito, mas muito sonhadoras.
       Dia da sorte: Terça-Feira
       Número da sorte: 22, 33`
     },
@@ -164,7 +155,8 @@ export default {
       id: 7,
       title: 'Virgem',
       img: virgem,
-      content: `Virginianos são extremamente meticulosos e organizados. São muito dedicados em todas as áreas da vida e profundamente fiéis. Além disso, virginianos são muito exigentes, já que se doam ao máximo, por isso não aceitam receber trabalhos imperfeitos e mal apresentados.
+      content: `
+      Virginianos são extremamente meticulosos e organizados. São muito dedicados em todas as áreas da vida e profundamente fiéis. Além disso, virginianos são muito exigentes, já que se doam ao máximo, por isso não aceitam receber trabalhos imperfeitos e mal apresentados.
       Dia da sorte: Sábado
       Número da sorte: 5, 14`
     },
@@ -172,7 +164,8 @@ export default {
       id: 8,
       title: 'Escorpião',
       img: escorpiao,
-      content: `Sua capacidade de argumentação se eleva com a conjunção Lua-Plutão-Júpiter, elevando a qualidade da informação compartilhada. A oposição do referido trio com o Sol alerta para a necessidade de lidar diplomaticamente com críticas negativas, que podem lhe desestabilizar emocionalmente.
+      content: `
+      Sua capacidade de argumentação se eleva com a conjunção Lua-Plutão-Júpiter, elevando a qualidade da informação compartilhada. A oposição do referido trio com o Sol alerta para a necessidade de lidar diplomaticamente com críticas negativas, que podem lhe desestabilizar emocionalmente.
       Números da Sorte: 13, 18
       Dia da sorte: Sexta- feira`
     },
@@ -180,7 +173,8 @@ export default {
       id: 9,
       title: 'Sagitário',
       img: sagitario,
-      content: `Desenvoltura social, pois elas surgem durante as conversas e nos círculos de amigos. Sagitarianos são pessoas muito bem relacionadas e que conseguem manter um bom papo facilmente.
+      content: `
+      Desenvoltura social, pois elas surgem durante as conversas e nos círculos de amigos. Sagitarianos são pessoas muito bem relacionadas e que conseguem manter um bom papo facilmente.
       Dia de sorte: Quinta-Feira
       Números da sorte: 3 e 9.`
     },
@@ -188,7 +182,8 @@ export default {
       id: 10,
       title: 'Capricórnio',
       img: capricornio,
-      content: `Praticidade e maturidade podem ser características fortes em pessoas com o sol no signo de Capricórnio. Independentes, costumam fazer seu próprio caminho e não confiar muito em rotas traçadas por outras pessoas.
+      content: `
+      Praticidade e maturidade podem ser características fortes em pessoas com o sol no signo de Capricórnio. Independentes, costumam fazer seu próprio caminho e não confiar muito em rotas traçadas por outras pessoas.
       Dia de sorte: Sábado
       Números da sorte: 6 e 8.`
     },
@@ -204,7 +199,8 @@ export default {
       id: 12,
       title: 'Gêmeos',
       img: gemeos,
-      content: `A oposição Sol-Lua no circuito material sugere algum descontrole para lidar com os desafios financeiros. Antes de tomar decisões importantes, procure se equilibrar emocionalmente, fundamental para o bom senso. Lua, Plutão e Júpiter conjuntos sinalizam que a superação deve começar internamente.
+      content: `
+      A oposição Sol-Lua no circuito material sugere algum descontrole para lidar com os desafios financeiros. Antes de tomar decisões importantes, procure se equilibrar emocionalmente, fundamental para o bom senso. Lua, Plutão e Júpiter conjuntos sinalizam que a superação deve começar internamente.
       Números da Sorte: 7, 18
       Dia da sorte: Domingo.`
     }

@@ -70,8 +70,8 @@ const ReportHeader: React.FC<ReportHeaderProps> = ({
           translateY: translateY
         }]
       }}>
-
-      <ImageLinearGradient />
+      {/*
+      <ImageLinearGradient /> */}
       {
         isVideo
           ? (
@@ -82,12 +82,14 @@ const ReportHeader: React.FC<ReportHeaderProps> = ({
               isMuted={false}
               resizeMode="cover"
               shouldPlay
+              isPlayinge
               isLooping
               useNativeControls={true}
             />
           )
           : (
             <>
+              <ImageLinearGradient />
               <Image
                 source={source}
                 style={{ opacity }}
