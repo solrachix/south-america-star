@@ -129,14 +129,20 @@ const Home: React.FC = ({ navigation }) => {
             }
           }}
 
-          HeaderComponent={() => report && (
+          // HeaderComponent={() => report && (
+          //   <ReportHeader
+          //     { ...report }
+          //     scrollY={scrollY}
+          //   />
+          // )}
+        >
+          { report && <>
             <ReportHeader
               { ...report }
               scrollY={scrollY}
             />
-          )}
-        >
-          { report && <ReportBody content={report.content} scrollY={scrollY} /> }
+            <ReportBody content={report.content} scrollY={scrollY} />
+          </> }
         </Modalize>
       </Portal>
     </Container>

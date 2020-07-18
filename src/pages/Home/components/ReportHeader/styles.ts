@@ -10,7 +10,7 @@ export const Container = styled(Animated.ScrollView)`
   width: 100%;
   height: auto;
 
-  padding-bottom: 70px;
+  padding-bottom: 120px;
   /* background:  #f00; */
 `
 

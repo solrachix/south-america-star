@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
+import { View } from 'react-native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 
 import { ThemeContext } from 'styled-components'
 
 import { Ionicons as Icon } from '@expo/vector-icons'
 
+import { TabBar } from '../components/tabBar'
 import Home from '../pages/Home'
 import Horoscopes from '../pages/Horoscopes'
 import Entertainment from '../pages/Entertainment'
@@ -17,21 +19,21 @@ const Routes: React.FC = () => {
   return (
     <Tab.Navigator
       tabBarPosition="bottom"
-
       keyboardDismissMode="on-drag"
       initialRouteName="Main"
-      tabBarOptions={{
-        activeTintColor: themeContext.orange,
-        showIcon: true,
-        showLabel: false,
-        style: { backgroundColor: themeContext.background.dark },
-        indicatorStyle: {
-          position: 'absolute',
-          backgroundColor: themeContext.orange,
-          top: '0%'
-        }
-      }}
-      // tabBar={props => <TabBar {...props} />}
+
+      // tabBarOptions={{
+      //   activeTintColor: themeContext.orange,
+      //   showIcon: true,
+      //   showLabel: false,
+      //   style: { backgroundColor: themeContext.background.dark },
+      //   indicatorStyle: {
+      //     position: 'absolute',
+      //     backgroundColor: themeContext.orange,
+      //     top: '0%'
+      //   }
+      // }}
+      tabBar={props => <TabBar {...props} />}
     >
 
       <Tab.Screen name="Main" component={(props) => <Home {...props } />}
@@ -50,8 +52,16 @@ const Routes: React.FC = () => {
 
       <Tab.Screen name="entertainment" component={Entertainment}
         options={{
+          tabBarLabel: 'games',
           tabBarIcon: ({ color }) => (
             <Icon name="logo-game-controller-a" color={color} size={25} />
+          )
+        }}/>
+
+      <Tab.Screen name="configurations" component={(props) => <View />}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Icon name="md-settings" color={color} size={25} />
           )
         }}/>
     </Tab.Navigator>

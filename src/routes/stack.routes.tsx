@@ -13,7 +13,7 @@ const Stack = createStackNavigator()
 
 const Routes: React.FC = () => {
   return (
-    <NavigationContainer >
+    <NavigationContainer>
       <Host>
         <Stack.Navigator
           // headerMode="none"

@@ -1,3 +1,5 @@
+require('react-native').unstable_enableLogBox()
+
 import React, { useState } from 'react'
 import { AppLoading } from 'expo'
 import { StatusBar } from 'expo-status-bar'

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components/native'
+import Animated from 'react-native-reanimated'
 
 interface props {
   text: string;
@@ -9,7 +10,7 @@ interface props {
   style?: unknown
 }
 
-export const Text = styled.Text`${(props: props) => css`
+export const Text = styled(Animated.Text)`${(props: props) => css`
   width: 100%;
   height: auto;
   text-align: ${props.align};
