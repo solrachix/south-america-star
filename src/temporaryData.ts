@@ -1,4 +1,9 @@
-import charge from './assets/images/charge.png'
+// import charge from './assets/images/charge.png'
+
+import trigonometriaNoCírculo from './assets/images/trigonometria-no-círculo.png'
+import circuloTrigonométrico from './assets/images/circulo-trigonométrico.png'
+import comprimentoDoArco from './assets/images/comprimento-do-arco.png'
+
 import reportagem1 from './assets/images/reportagem_1.jpg'
 import reportagem2 from './assets/images/ano2020.png'
 
@@ -78,22 +83,17 @@ export default {
     {
       id: 1,
       author: 'Charge',
-      img: charge
+      img: trigonometriaNoCírculo
     },
     {
       id: 2,
       author: 'Charge',
-      img: charge
+      img: circuloTrigonométrico
     },
     {
       id: 3,
       author: 'Charge',
-      img: charge
-    },
-    {
-      id: 4,
-      author: 'Charge',
-      img: reportagem1
+      img: comprimentoDoArco
     }
   ],
   horoscopes: [
