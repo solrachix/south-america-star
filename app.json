@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "south_america_star",
+    "name": "South America Star",
     "slug": "south_america_star",
-    "description": "Newspaper APP",
+    "description": "Project developed for my school! is a newspaper app, with horoscopes, news, and entertainment pages! I did it in 5 days, in other words, it is not such a complex app.",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
