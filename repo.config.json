@@ -1,0 +1,9 @@
+{
+  "project_name": "South America Star",
+  "type": "mobile",
+  
+  "template_url": "./assets/demonstration.gif",
+  "logo_url": "./assets/logo.png",
+
+  "mobile": "./"
+}
