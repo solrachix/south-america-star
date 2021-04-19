@@ -2,16 +2,16 @@
 <p align="center">
 	<img alt="Ecoleta Template" src= "https://github.com/solrachix/newspaper-app/blob/master/assets/icon.png?raw=true" width="200px" />
 	<br/>
-  <a href="LICENSE" style="text-decoration: none">
+  <a href="LICENSE">
     <img alt="License" src="https://img.shields.io/github/license/solrachix/newspaper-app?color=FF7C3F&labelColor=24292E"/>
   </a>
-  <a href="https://github.com/solrachix/newspaper-app/issues" style="text-decoration: none">
+  <a href="https://github.com/solrachix/newspaper-app/issues">
     <img alt="Issues" src="https://img.shields.io/github/issues/solrachix/newspaper-app?style=flat-square&logo=github&logoColor=white&color=FF7C3F&labelColor=24292E" />
   </a>
-   <a href="#" style="text-decoration: none">
+   <a href="#">
     <img alt="Issues" src="https://img.shields.io/github/stars/solrachix/newspaper-app?style=flat-square&logo=github&logoColor=white&color=FF7C3F&labelColor=24292E" />
   </a>
-   <a href="#" style="text-decoration: none">
+   <a href="#">
     <img alt="Issues" src="https://img.shields.io/github/languages/top/solrachix/newspaper-app?style=flat-square&logo=github&logoColor=white&color=FF7C3F&labelColor=24292E" />
   </a>
 </p>
