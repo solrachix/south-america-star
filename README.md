@@ -90,7 +90,7 @@ After merging your receipt request to done, you can delete a branch from yours.
 Depois que a sua solicitação de recebimento for feita o merging, você pode excluir a sua branch.
 
 ## :memo: License
-This project is under the MIT license. See the file [LICENSE](LICENSE) for more details.
+	This project is under the MIT license. See the file [LICENSE](LICENSE) for more details.
 ---
 
 Feito com :heart: Carlos Miguel :wave:
